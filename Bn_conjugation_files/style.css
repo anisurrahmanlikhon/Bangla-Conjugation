@@ -1,0 +1,601 @@
+@font-face
+{
+	font-family: DefaultBangla;
+	src: url('fonts/Lohit-Bengali.eot'); /* IE9 Compat Modes */
+	src: url('fonts/Lohit-Bengali.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		url('fonts/Lohit-Bengali.woff') format('woff'), /* Pretty Modern Browsers */
+		url('fonts/Lohit-Bengali.ttf') format('truetype'); /* Safari, Android, iOS */
+	/*unicode-range: U+0980-09FF;*/
+}
+body
+{
+	background-color: white;
+	padding: 0;
+	margin: 0;
+	font-family: "Bangla Sangam MN", DefaultBangla, sans-serif;
+/*"Lohit Bengali", "Bangla Sangam MN", Vrinda;*/
+/* Noto Sans Bengali" */
+/* Droid Sans */
+}
+.banner
+{
+	margin: 0 auto;
+	left:0;
+	right:0;
+	padding: 0;
+	background-color: white;
+	text-align: center;
+	border-bottom:1px solid #c0c0c0;
+}
+.title
+{
+	font-size: 200%;
+}
+/* derived from http://cssdeck.com/labs/another-simple-css3-dropdown-menu */
+.navmenu a:link {color:black;}
+.navmenu a:visited {color:black;} 
+.navmenu a:hover {color:black;}
+.navmenu a:active {color:black;}
+.navmenu a {text-decoration:none;}
+/* there is some trickery here because we want space around the menu text whether it is an href or not,
+yet we want the whole space to be clickable */
+.navmenu li { padding: 6px; }
+.navmenu li a {
+	margin: -6px;
+	padding: 6px;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+ul.navmenu {
+	background-color: white;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	display: block;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+ul.navmenu li {
+	text-align: left;
+	display: inline-block;
+	margin: 0;
+	position: relative;
+	background: white;
+	cursor: pointer;
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	transition: all 0.2s;
+}
+ul.navmenu > li {
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+ul.navmenu li ul {
+	margin: 0;
+	padding: 0px;
+	position: absolute;
+	z-index: 1;
+	top: 28px; /* why is this not 26? */
+	left: 0;
+	width: 260px;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: 8px 8px 8px #888888;
+	display: none;
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transiton: opacity 0.2s;
+	-moz-transition: opacity 0.2s;
+	-ms-transition: opacity 0.2s;
+	-o-transition: opacity 0.2s;
+	-transition: opacity 0.2s;
+}
+ul.navmenu li ul li {
+	background: rgb(245,245,245);
+	display: block; 
+}
+ul.navmenu li:hover,
+ul.navmenu li.dropped {
+  background: rgb(245,245,245);
+}
+ul.navmenu li ul li:hover {
+	background: white;
+}
+ul.navmenu li:hover ul,
+ul.navmenu li.dropped ul {
+	display: block;
+	opacity: 1;
+	visibility: visible;
+}
+
+.menu
+{
+	background-color: white;
+	padding: 3px;
+}
+.menu_item
+{
+	border-radius: 8px;
+	padding-left: 6px;
+	padding-right: 6px;
+	background-color: Cornsilk;
+	border:1px solid #c0c0c0;
+}
+a.menu_item:link
+{
+	color: black;
+	text-decoration:none;
+}
+a.menu_item:visited
+{
+	color: black;
+	text-decoration:none;
+}
+a.menu_item:hover
+{
+	color: black;
+	text-decoration:none;
+	background-color: white;
+}
+a.menu_item:active
+{
+	color: black;
+	text-decoration:none;
+}
+.movie-wrapper
+{
+	position:fixed;
+	margin: 0 auto;
+	left:0;
+	right:0;
+	background-color: white;
+	max-width: 750px;
+	padding-top:60px;
+	padding-bottom: 5px;
+}
+.movie-wrapper iframe
+{
+	position:absolute;
+	margin: 0 auto;
+	display:block;
+	left:0;
+	right:0;
+	border:0;
+}
+.movie-banner
+{
+	position:fixed;
+}
+.page
+{
+	background-color: White;
+	max-width: 750px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	box-shadow: 7px 7px 7px white;
+	border:1px solid #c0c0c0;
+	border-top: 0; /* turn off redundant top border (the banner has a bottom border) */
+}
+.content
+{
+	padding-left: 5%;
+	padding-right: 5%;
+	text-align: justify;
+	padding-top: 2%;
+	padding-bottom: 3%;
+}
+.dict_content
+{
+	text-align: left;
+}
+.popup_content
+{
+	margin-bottom: 0;
+	border-top: 1px solid #c0c0c0; /* we need all 4 borders since there is no banner in the popup */
+}
+h2
+{
+	text-align: center;
+	margin-top: 0px;
+}
+h3
+{
+	font-size: 125%;
+	background-color: #f0f0f0;
+	padding: 4px;
+	font-weight: normal;
+}
+.word-is-defined
+{
+	color : DarkRed;
+}
+.ImageBorder
+{
+	border: 1px solid #000000;
+}
+.dict_heading
+{
+	font-size: 100%;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	font-weight: bold;
+	max-height: 100000px; /* Chrome for Android font boosting bug workaround */
+}
+.dict_radio
+{
+	margin-left: 40px;
+}
+.dict-query-head
+{
+	font-size: larger;
+	margin-top: 15px;
+}
+.dict_name_heading
+{
+	font-size: 125%;
+	background-color: #f0f0f0;
+	padding: 4px;
+}
+.examples
+{
+	padding-left: 100px;
+}
+.fancybox_caption
+{
+	font-size: 200%;
+}
+.variants
+{
+	padding-left: 40px;
+}
+.search_mode
+{
+	font-weight: bold;
+	padding-right: 10px;
+}
+.approx_result
+{
+	background-color: Moccasin;
+}
+.approx-dist-block
+{
+}
+.approx-dist-block-head
+{
+	font-size: 175%;
+}
+.approx-word-block
+{
+	background-color: #f0f0f0;
+	border-radius: 10px;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	/* for some reason >0px bottom padding causes ~10px */
+	padding-bottom: 1px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 5px;
+	margin-bottom: 15px;
+}
+.dict-entry
+{
+	display: block;
+	margin-top: 0.3em;
+	margin-bottom: 0.6em;
+}
+.dict_options
+{
+	margin-left: 20px;
+}
+.approx-word-block-head
+{
+	color: DarkRed;
+	/*text-align: center;*/
+	font-size:150%;
+}
+.approx-dict-name
+{
+	margin-top: 0.75em;
+	font-weight: bold;
+}
+.dict-entry-heading
+{
+	display: block;
+	font-style: italic;
+	margin-bottom: 0.2em;
+}
+.dict-entry-defn
+{
+	word-wrap: break-word;
+}
+.highlight
+{
+	background-color: yellow;
+}
+a:link {color:#d00000}
+a:visited {color:#800000;}
+a:hover {color:#f00000;}
+a:active {color:#d00000;}
+a
+{
+	text-decoration:none;
+}
+a.title_href:link {color:black;}
+a.title_href:visited {color:black;} 
+a.title_href:hover {color:black;}
+a.title_href:active {color:black;}
+a.title_href
+{
+	text-decoration:none;
+}
+a.fancy_href
+{
+	background-color: Moccasin;
+	text-decoration:inherit;
+	color:inherit;
+	border:1px solid #c0c0c0;
+	border-radius: 4px;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+a.fancy_href:hover
+{
+	background-color: #FFC88C;
+}
+
+a.fancy_href
+{
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+a.ext_href
+{
+	color: black;
+	text-decoration: underline;
+}
+a.ext_href:hover
+{
+	color:#f00000;
+}
+ul.quick_links
+{
+	list-style-type: none;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+ul.quick_links_sub
+{
+	list-style-type: none;
+}
+
+li.quick_links
+{
+	background-color: Cornsilk;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 3px;
+	border-radius: 5px;
+	border:1px solid #c0c0c0;
+}
+table.book-table
+{
+	max-width: 620px;
+	margin: 0 auto;
+}
+table.film-script-table .film-misc
+{
+	font-size: 120%;
+}
+table.film-script-table td:first-child,
+table.book-table td:first-child
+{
+	white-space:nowrap;
+	vertical-align: text-top;
+	font-size: 50%;
+}
+table.film-script-table td:nth-child(2):not(.film-misc)
+{
+	white-space:nowrap;
+	vertical-align: text-top;
+	font-size: 80%;
+}
+table.film-script-table td:nth-child(3)
+{
+	white-space:nowrap;
+	font-weight: bold;
+	padding-left:10px;
+	padding-right:10px;
+	vertical-align: text-top;
+	font-size: 120%;
+	text-align: right;
+	width: 0; /* make this column as narrow as possible (sometimes it's empty) */
+}
+table.film-script-table td:nth-child(4)
+{
+	font-size: 120%;
+}
+table.film-script-table td:nth-child(4),
+table.book-table td:nth-child(2):not(.film-misc)
+{
+	vertical-align: text-top;
+}
+table.book-table td:nth-child(2):not(.film-misc):not(.noindent):not(.center)
+{
+	text-indent: 2em;
+}
+table.book-table td:nth-child(2).center:not(.film-misc)
+{
+	text-align: center;
+}
+table.book-table td:nth-child(2).right:not(.film-misc)
+{
+	text-align: right;
+}
+table.book-table td:nth-child(2)
+{
+	font-size: 125%;
+}
+.film-misc
+{
+	text-align: center;
+	vertical-align: text-top;
+	font-size: 100%;
+	font-weight: bold;
+}
+.film-note
+{
+	font-size: smaller;
+	margin-left: 50px;
+	margin-right: 50px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	padding-left: 5px;
+	padding-right: 5px;
+	background-color: #f0f0f0;
+	text-indent: 0;
+	border-radius: 8px;
+}
+.conjugation-table-div
+{
+	width: auto;
+	overflow-x:auto;
+}
+table.conjugation-table th
+{
+	text-align: center;
+	background-color: #f0f0f0;
+	padding-left: 0.4em;
+	padding-right: 0.4em;
+}
+table.conjugation-table th:first-child
+{
+	text-align: left;
+	background-color: Khaki;
+	padding-left: 0.25em;
+	padding-right: 0.25em;
+}
+table.conjugation-table td
+{
+	text-align: center;
+	padding-left: 0.3em;
+	padding-right: 0.3em;
+}
+table.conjugation-table td:first-child
+{
+	text-align: left;
+	white-space: nowrap;
+}
+.conjugation-table-title
+{
+	font-weight: bold;
+}
+.pron-low /* the space is important */
+{
+	background-color: PeachPuff;
+}
+.irregular-verb
+{
+	color: Red;
+}
+.shadhu-from-chalit
+{
+	color: Gray;
+}
+.shadhu-from-chalit .irregular-verb
+{
+	color: #ff7070; /* this should be a faded version of the .irregular-verb color */
+}
+table.conj-overview-table
+{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+table.conj-overview-table,  table.conj-overview-table td, table.conj-overview-table tr
+{
+	border-collapse: collapse;
+}
+
+table.conj-overview-table td
+{
+	border-top:1px solid black;
+	border-bottom:1px solid black;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+}
+table.conj-overview-table tr:first-child td
+{
+	border-top:2px solid black;
+}
+table.conj-overview-table tr:last-child td
+{
+	border-bottom:2px solid black;
+}
+.big_text
+{
+	/* this is to fix a bug in Chrome where the Bangla text shifts down in the box so you can only see half of it */
+	line-height: 1.5em;
+}
+.warning-note
+{
+	margin-left: 2.5em;
+	margin-right: 2.5em;
+	font-style: italic;
+}
+.dict_options_button {
+	cursor: pointer;
+}
+#conjugate-form input[name="verb"] {
+	width: 5em;
+}
+
+/* narrow screen, including popup windows */
+@media
+only screen and (max-width: 750px)
+{
+	.page
+	{
+		max-width: none;
+		margin-bottom: 0;
+		box-shadow: none;
+	}
+}
+@media
+only screen and (max-width: 534px) /* 480 + 5% margins (10% of the initial width) */
+{
+	.movie-banner .title {
+		font-size: 100%;
+	}
+	.movie-content {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	/* hide the line numbers */
+	table.film-script-table td:first-child {
+		display: none;
+	}
+	table.film-script-table td:nth-child(3) {
+		white-space: normal;
+		padding-left: 1px;
+		padding-right: 5px;
+		font-size: 100%;
+	}
+	table.film-script-table .film-misc {
+		font-size: 100%;
+	}
+	table.film-script-table td:nth-child(4) {
+		font-size: 100%;
+	}
+	.film-note {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+}
+
+
